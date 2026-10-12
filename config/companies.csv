@@ -1,0 +1,35 @@
+stock_id,name_zh,name_en,aliases,layer,segment,country
+6488,環球晶,GlobalWafers,GlobalWafers|環球晶圓,1_upstream,silicon_wafer,TW
+3037,欣興,Unimicron,Unimicron|欣興電子,1_upstream,abf_substrate,TW
+8046,南電,Nan Ya PCB,Nan Ya PCB|Nan Ya Printed Circuit Board|南亞電路板,1_upstream,abf_substrate,TW
+3189,景碩,Kinsus,Kinsus|景碩科技,1_upstream,abf_substrate,TW
+2383,台光電,Elite Material,Elite Material|EMC|台光電子,1_upstream,ccl,TW
+2330,台積電,TSMC,TSMC|Taiwan Semiconductor|台灣積體電路,2_manufacturing,foundry,TW
+3711,日月光投控,ASE Technology,ASE Technology|ASE Group|日月光,2_manufacturing,packaging,TW
+2408,南亞科,Nanya Technology,Nanya Technology|Nanya Tech|南亞科技,2_manufacturing,memory,TW
+2344,華邦電,Winbond,Winbond|Winbond Electronics|華邦電子,2_manufacturing,memory,TW
+3443,創意,Global Unichip,Global Unichip|GUC|創意電子,2_manufacturing,asic,TW
+2368,金像電,Gold Circuit Electronics,Gold Circuit|GCE|金像電子,2_manufacturing,pcb,TW
+2317,鴻海,Hon Hai,Hon Hai|Foxconn|Hon Hai Precision|鴻海精密,3_ai_server,server_odm,TW
+2382,廣達,Quanta Computer,Quanta Computer|Quanta Cloud Technology|QCT|廣達電腦,3_ai_server,server_odm,TW
+3231,緯創,Wistron,Wistron|緯創資通,3_ai_server,server_odm,TW
+6669,緯穎,Wiwynn,Wiwynn|緯穎科技,3_ai_server,server_odm,TW
+2356,英業達,Inventec,Inventec|英業達,3_ai_server,server_odm,TW
+2376,技嘉,Gigabyte,Gigabyte|Giga-Byte|技嘉科技,3_ai_server,server_brand,TW
+2308,台達電,Delta Electronics,Delta Electronics|台達電子,3_ai_server,power,TW
+2301,光寶科,Lite-On Technology,Lite-On|Lite-On Technology|光寶科技,3_ai_server,power,TW
+3017,奇鋐,Asia Vital Components,Asia Vital Components|AVC|奇鋐科技,3_ai_server,thermal,TW
+3324,雙鴻,Auras Technology,Auras|Auras Technology|雙鴻科技,3_ai_server,thermal,TW
+2059,川湖,King Slide Works,King Slide|川湖科技,3_ai_server,server_rail,TW
+2603,長榮,Evergreen Marine,Evergreen Marine|Evergreen Line|長榮海運,4_logistics,ocean_freight,TW
+2609,陽明,Yang Ming Marine,Yang Ming|Yang Ming Marine|陽明海運,4_logistics,ocean_freight,TW
+2615,萬海,Wan Hai Lines,Wan Hai|Wan Hai Lines|萬海航運,4_logistics,ocean_freight,TW
+2618,長榮航,EVA Air,EVA Air|EVA Airways|長榮航空,4_logistics,air_cargo,TW
+2610,華航,China Airlines,China Airlines|中華航空,4_logistics,air_cargo,TW
+2636,台驊投控,T3EX Global,T3EX|台驊,4_logistics,freight_forwarding,TW
+NVDA,輝達,NVIDIA,NVIDIA|Nvidia|輝達,5_end_customer,ai_chip,US
+MSFT,微軟,Microsoft,Microsoft|Azure|微軟,5_end_customer,hyperscaler,US
+GOOGL,Alphabet,Alphabet,Alphabet|Google|Google Cloud|谷歌,5_end_customer,hyperscaler,US
+AMZN,亞馬遜,Amazon,Amazon|AWS|Amazon Web Services|亞馬遜,5_end_customer,hyperscaler,US
+META,Meta,Meta Platforms,Meta Platforms|Meta,5_end_customer,hyperscaler,US
+ORCL,甲骨文,Oracle,Oracle|OCI|甲骨文,5_end_customer,hyperscaler,US
