@@ -128,7 +128,8 @@ def build_processed(queries: pd.DataFrame) -> None:
         for it in parse_items(path.read_text(encoding="utf-8")):
             it.update({
                 "query_id": query_id,
-                "layer": meta.at[query_id, "layer"],
+                "topic_chain": meta.at[query_id, "chain"],
+                "topic_layer": meta.at[query_id, "layer"],
                 "lang": meta.at[query_id, "lang"],
                 "stock_id": meta.at[query_id, "stock_id"],
                 "window_start": path.stem,

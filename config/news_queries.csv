@@ -1,46 +1,46 @@
-query_id,layer,stock_id,lang,terms,must_include
-6488_zh,1_upstream,6488,zh,環球晶,
-3037_zh,1_upstream,3037,zh,欣興,
-8046_zh,1_upstream,8046,zh,南電,
-3189_zh,1_upstream,3189,zh,景碩,
-2383_zh,1_upstream,2383,zh,台光電,
-2330,2_manufacturing,2330,en,TSMC,
-2330_zh,2_manufacturing,2330,zh,台積電,
-3711_zh,2_manufacturing,3711,zh,日月光,
-2408_zh,2_manufacturing,2408,zh,南亞科,
-2344_zh,2_manufacturing,2344,zh,華邦電,
-3443_zh,2_manufacturing,3443,zh,創意電子,
-2368_zh,2_manufacturing,2368,zh,金像電,
-2317,3_ai_server,2317,en,Foxconn|Hon Hai,
-2317_zh,3_ai_server,2317,zh,鴻海,
-2382_zh,3_ai_server,2382,zh,廣達,
-3231_zh,3_ai_server,3231,zh,緯創,
-6669_zh,3_ai_server,6669,zh,緯穎,
-2356_zh,3_ai_server,2356,zh,英業達,
-2376_zh,3_ai_server,2376,zh,技嘉,
-2308_zh,3_ai_server,2308,zh,台達電,
-2301_zh,3_ai_server,2301,zh,光寶科,
-3017_zh,3_ai_server,3017,zh,奇鋐,
-3324_zh,3_ai_server,3324,zh,雙鴻,
-2059_zh,3_ai_server,2059,zh,川湖,
-2603_zh,4_logistics,2603,zh,長榮海運|長榮海,
-2609_zh,4_logistics,2609,zh,陽明海運,
-2615_zh,4_logistics,2615,zh,萬海,
-2618_zh,4_logistics,2618,zh,長榮航,貨運
-2610_zh,4_logistics,2610,zh,華航,貨運
-2636_zh,4_logistics,2636,zh,台驊,
-NVDA,5_end_customer,NVDA,en,Nvidia,
-MSFT,5_end_customer,MSFT,en,Microsoft,data center
-GOOGL,5_end_customer,GOOGL,en,Google,data center
-AMZN,5_end_customer,AMZN,en,Amazon,data center
-META,5_end_customer,META,en,Meta,data center
-ORCL,5_end_customer,ORCL,en,Oracle,data center
-topic_abf,1_upstream,,en,ABF substrate,
-topic_abf_zh,1_upstream,,zh,ABF載板,
-topic_cowos,2_manufacturing,,en,CoWoS,
-topic_cowos_zh,2_manufacturing,,zh,CoWoS,
-topic_hbm,2_manufacturing,,en,HBM,memory
-topic_ai_server,3_ai_server,,en,AI server,
-topic_ai_server_zh,3_ai_server,,zh,AI伺服器,
-topic_air_freight,4_logistics,,en,air freight,semiconductor
-topic_export_controls,0_macro,,en,export controls,chips
+query_id,stock_id,chain,layer,lang,terms,must_include
+6488_zh,6488,,,zh,環球晶,
+3037_zh,3037,,,zh,欣興,
+8046_zh,8046,,,zh,南電,
+3189_zh,3189,,,zh,景碩,
+2383_zh,2383,,,zh,台光電,
+2330,2330,,,en,TSMC,
+2330_zh,2330,,,zh,台積電,
+3711_zh,3711,,,zh,日月光,
+2408_zh,2408,,,zh,南亞科,
+2344_zh,2344,,,zh,華邦電,
+3443_zh,3443,,,zh,創意電子,
+2368_zh,2368,,,zh,金像電,
+2317,2317,,,en,Foxconn|Hon Hai,
+2317_zh,2317,,,zh,鴻海,
+2382_zh,2382,,,zh,廣達,
+3231_zh,3231,,,zh,緯創,
+6669_zh,6669,,,zh,緯穎,
+2356_zh,2356,,,zh,英業達,
+2376_zh,2376,,,zh,技嘉,
+2308_zh,2308,,,zh,台達電,
+2301_zh,2301,,,zh,光寶科,
+3017_zh,3017,,,zh,奇鋐,
+3324_zh,3324,,,zh,雙鴻,
+2059_zh,2059,,,zh,川湖,
+2603_zh,2603,,,zh,長榮海運|長榮海,
+2609_zh,2609,,,zh,陽明海運,
+2615_zh,2615,,,zh,萬海,
+2618_zh,2618,,,zh,長榮航,貨運
+2610_zh,2610,,,zh,華航,貨運
+2636_zh,2636,,,zh,台驊,
+NVDA,NVDA,,,en,Nvidia,
+MSFT,MSFT,,,en,Microsoft,data center
+GOOGL,GOOGL,,,en,Google,data center
+AMZN,AMZN,,,en,Amazon,data center
+META,META,,,en,Meta,data center
+ORCL,ORCL,,,en,Oracle,data center
+topic_abf,,ai_server,1_upstream,en,ABF substrate,
+topic_abf_zh,,ai_server,1_upstream,zh,ABF載板,
+topic_cowos,,ai_server,2_manufacturing,en,CoWoS,
+topic_cowos_zh,,ai_server,2_manufacturing,zh,CoWoS,
+topic_hbm,,ai_server,2_manufacturing,en,HBM,memory
+topic_ai_server,,ai_server,3_ai_server,en,AI server,
+topic_ai_server_zh,,ai_server,3_ai_server,zh,AI伺服器,
+topic_air_freight,,ai_server,4_logistics,en,air freight,semiconductor
+topic_export_controls,,ai_server,0_macro,en,export controls,chips
