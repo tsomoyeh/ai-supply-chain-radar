@@ -1,0 +1,101 @@
+﻿article_id,lang,title,rel,ev,dir,rel__關鍵字規則,ev__關鍵字規則,dir__關鍵字規則,rel__openai_gpt-oss-120b,ev__openai_gpt-oss-120b,dir__openai_gpt-oss-120b,rel__qwen_qwen3.8-27b,ev__qwen_qwen3.8-27b,dir__qwen_qwen3.8-27b
+68fc50ee9f9061a3,en,Microsoft buys 316 acres from Steelcase for potential data center in Kent County,1,capacity_expansion,1,1,capacity_expansion,0,1,capacity_expansion,1,1,demand_up,1
+3f0be1a0efd75cc9,en,AWS and NVIDIA Extend Collaboration to Advance Generative AI Innovation,1,demand_up,1,0,other,0,1,demand_up,1,1,product_tech,1
+0883d7f245128228,zh,輝達「地表最強AI晶片」恐難產？水冷散熱零件大缺貨…買家搶料掃貨「只要有料，價格好談」,1,capacity_tight,-1,1,capacity_tight,0,1,supply_disruption,-1,1,supply_disruption,1
+c85c29f6a91e06d9,zh,華邦電 6 月營收年增 5.56%，創十個月來新高,1,financial_report,1,1,financial_report,1,1,financial_report,1,1,financial_report,1
+173c69c0c4799c16,en,Foxconn Interconnect Technology to build EV charging plant in Saudi Arabia,1,capacity_expansion,1,0,other,0,1,capacity_expansion,1,0,other,0
+128ae950ec65a717,en,"[News] TSMC Reportedly Invests over USD 12.3 Billion in EUV, Advancing in 2nm Production",1,capacity_expansion,1,1,capacity_expansion,0,1,capacity_expansion,1,1,capacity_expansion,1
+9160e9f15bf5f15b,zh,金像電 二檔聚光,0,other,0,0,other,0,0,other,0,0,other,0
+a7491c3c17e443c7,zh,台光電今年低軌衛星/AI伺服挑戰100%成長,1,demand_up,1,1,other,1,1,demand_up,1,1,demand_up,1
+7ce8fd59779bfe76,zh,華航年終有望6個月起跳　創高,0,other,0,1,other,1,0,other,0,0,other,0
+aaf73d525d4ed944,en,AWS just bought a nuclear-powered data center,1,capacity_expansion,1,0,other,0,1,capacity_expansion,1,1,demand_up,1
+03e56ae42d15f22c,en,Designing Production-Ready Battery Energy Storage Systems for AI Factories | NVIDIA Technical Blog,0,other,0,0,other,0,0,other,0,0,other,0
+c8669cbf66d22407,en,Beyon Solutions and Oracle to develop sovereign cloud in Bahrain,1,capacity_expansion,1,0,other,0,1,demand_up,1,1,demand_up,1
+54074b2db81e9c8c,zh,【巴黎奧運】「31歲廣達工程師」奪蛙泳銀牌還讀碩士　網驚：下班不累？,0,other,0,0,other,0,0,other,0,0,other,0
+057105e3d11ed376,en,Microsoft buys a second large property in West Michigan for potential data center,1,capacity_expansion,1,0,other,0,1,capacity_expansion,1,1,demand_up,1
+05d0b39151e35069,zh,發揮技術優勢 創新投入永續 技嘉科技實現「愛地球、增營收」雙贏！,0,other,0,1,financial_report,0,0,other,0,0,other,0
+2c351acd6bf7dd79,en,Microsoft's GenAI Strategy: Redefining the Future of AI,0,other,0,0,other,0,0,other,0,0,other,0
+0d903ea3703f419c,en,TSMC Cut Off Chinese Crypto Mogul’s Firm as US Probes Huawei Link,1,policy_trade,-1,1,other,-1,1,policy_trade,-1,1,policy_trade,-1
+8237f09c7f0ec830,zh,緝毒查到一半，查出全球罕見晶片走私案！倉庫裡藏的不是毒品，是AI伺服器,0,other,0,0,other,0,1,supply_disruption,-1,1,supply_disruption,-1
+9ae61bdf880a6570,en,Portion of Paulding Road set to ‘permanently’ close for Google data center construction,1,capacity_expansion,1,0,other,0,0,other,0,1,demand_up,1
+97f6f3f21e3b5d0e,en,Danfoss to provide cooling and heat reuse tech at Google data centers,1,demand_up,1,0,other,0,1,demand_up,1,1,demand_up,1
+30c0de1694e963b7,zh,長榮海運貨輪遇襲 聯合國國際海事組織暫停護航行動 | 路透社,1,supply_disruption,-1,0,other,0,1,supply_disruption,-1,1,supply_disruption,-1
+e15f5d67281fbd28,en,"SanDisk's new High Bandwidth Flash memory enables 4TB of VRAM on GPUs, matches HBM bandwidth at higher capacity",1,product_tech,1,1,other,-1,1,product_tech,1,1,product_tech,1
+a6740ca0a900ec51,en,Tesla may gimp its HW5 FSD computer to meet export controls as it details AI6 chip plans,1,policy_trade,-1,1,policy_trade,0,1,policy_trade,-1,1,policy_trade,-1
+22021173b8918e5b,zh,載板三雄誰能笑到最後？為什麼欣興(3037)是AI浪潮下的最佳投資首選！,0,other,0,0,other,0,1,demand_up,1,0,other,0
+2b9f8bb744febfc0,en,Protecting the Foundation: Strengthening Export Controls on Semiconductor Manufacturing Equipment,1,policy_trade,-1,1,policy_trade,0,1,policy_trade,-1,1,policy_trade,-1
+8e0873cdd9dd6048,zh,長榮航10/3直飛達拉斯 北美拓展9大航點 | 產經,0,other,0,0,other,0,0,other,0,0,other,0
+174946d5ef51b262,zh,"廣達38週年家庭日! 林百里喊話小廣達人""長大來上班""",0,other,0,0,other,0,0,other,0,0,other,0
+10ab471e3699a981,en,Google power deal could clear way for $1 billion carbon capture plant in Illinois,0,other,0,0,other,0,0,other,0,1,demand_up,1
+200f8cbdecebea2d,zh,專利、產能並進奠定產業競爭護城河，台光電打造 AI 雙軌優勢邁向爆發期,1,demand_up,1,0,other,0,1,demand_up,1,1,capacity_expansion,1
+1d16484ba9bf5dcd,zh,AI伺服器需求外溢 戴爾財報揭基建市場全面擴張,1,demand_up,1,1,financial_report,0,1,demand_up,1,1,demand_up,1
+64d53d266bd756ed,zh,陽明向日本造船廠訂3艘全貨櫃輪 2028年起交船迎新船隊,1,capacity_expansion,1,0,other,0,0,other,0,1,capacity_expansion,1
+2d0e787d6689ab09,zh,AI伺服器、PC雙引擎發威！華碩6月營收首破千億大關寫新高,1,financial_report,1,1,financial_report,1,1,financial_report,1,1,financial_report,1
+678939be0e41ba97,en,"""Solving HBM Heat Generation""…SK hynix Unveils Memory Solution 'iHBM'",1,product_tech,1,1,product_tech,0,1,product_tech,1,1,product_tech,1
+aba88791e6f9858a,zh,超微GPU新品來了！法人：雙鴻等散熱、組裝台廠將受惠- 日報,1,demand_up,1,1,product_tech,0,1,product_tech,1,1,demand_up,1
+308798f6f32e2a56,en,"Meta plans ""notably larger"" capex spend on AI data centers in 2026, compute expectations already higher than last quarter prediction",1,capacity_expansion,1,0,other,0,1,demand_up,1,1,demand_up,1
+061e9fb9b5b71178,en,"Google Executives Reportedly Visited TSMC To Secure A Chipset Deal For Pixel Smartphones; Partnership May Last An Estimated Five Years, With The Tensor G5 Being The Company’s First 3nm SoC",1,demand_up,1,1,other,-1,1,demand_up,1,1,demand_up,1
+05f8ad513fa7e6f6,en,Hon Hai Precision: New-Found Focus On AI Is Paying Off (OTCMKTS:HNHPF),0,other,0,0,other,0,1,demand_up,1,0,other,0
+c5350394d03e37e1,en,"Memory Shortages Are Actually So Terrible That Samsung Is Shifting HBM Production Towards DDR5, to Ensure That It Gets “Maximized Profits”",1,capacity_tight,1,1,financial_report,0,1,price_up,1,1,supply_disruption,1
+4e550dbf180a7a10,en,"Google undercounts its carbon emissions, report finds",0,other,0,0,other,0,0,other,0,0,other,0
+1cae9ccca9edef69,zh,廣達11月營收1929億元年增三成 改寫歷史新猷,1,financial_report,1,1,financial_report,0,1,financial_report,1,1,financial_report,1
+1844bcdb5d893ed7,zh,光寶科三箭齊發推升成長型事業- 日報,1,demand_up,1,1,other,1,1,demand_up,1,1,product_tech,1
+00599222a4e46e70,zh,亞馬遜推最強晶片 新一波 AI 伺服器建置潮 可望帶旺緯穎、鴻海等營運,1,demand_up,1,1,other,1,1,demand_up,1,1,demand_up,1
+ada8846c95b278b6,zh,尬廣跟上，技嘉也支援 INTEL BASELINE 模式了,0,other,0,0,other,0,1,product_tech,0,0,other,0
+365e44fd578995d7,zh,華航去年EPS2.38元寫新高 高星潢真除 升任董座,1,financial_report,1,1,financial_report,1,1,financial_report,1,0,other,0
+67338f727ad6f30d,en,‘Magnificent Seven’ Tech Stocks Including Nvidia and Microsoft Are on Top Again,0,other,0,0,other,0,0,other,0,0,other,0
+0823171f1ff94e0c,en,On GPS: Nvidia CEO on whether AI will lead to job losses,0,other,0,1,other,-1,0,other,0,0,other,0
+1762fb99e262efd6,zh,陽明、韓華正式簽署7艘LNG雙燃料輪 2028年起交付,1,capacity_expansion,1,0,other,0,0,other,0,0,other,0
+253577f3a9a174d8,zh,金像電伺服器/網通占比破九成，泰國二廠明年量產,1,capacity_expansion,1,0,other,0,1,capacity_expansion,1,1,capacity_expansion,1
+5b0dea5fb76dbd2f,en,"Weekend Reading | In-depth Interview with Kim Jung-ho, the 'Father of HBM': Memory Chips Are More Critical in the Inference Phase; Power Delivery Networks and Cooling Technologies Will Become Extremely Important in the Future",0,other,0,0,other,0,0,other,0,0,other,0
+14bac8675408f1ce,zh,彭博：AI晶片貨運需求爆發 華航長榮貨運營收升至三年高點,1,demand_up,1,1,financial_report,0,1,demand_up,1,1,demand_up,1
+1729ce25c0208823,en,Microsoft to invest over $1B in Thailand,1,capacity_expansion,1,1,capacity_expansion,0,1,capacity_expansion,1,1,capacity_expansion,1
+eaa064fbe1a3bade,en,[News] Memory Giants’ HBM Focus Could Limit DRAM Growth Through 2026; Taiwan Firms Boost DDR4,1,capacity_tight,1,1,other,1,1,demand_down,-1,1,supply_disruption,-1
+8a3af6472aafa85f,en,Kuehne+Nagel strengthens own-controlled air freight network with greater global connectivity,1,capacity_expansion,1,0,other,0,1,capacity_expansion,1,0,other,0
+99ec389a8b6d9f87,zh,強攻AI 環球晶今年營運要贏去年- 日報,1,demand_up,1,0,other,0,1,demand_up,1,1,demand_up,1
+14548c34951d19fd,en,From Megawatts to Tokens: How NVIDIA Maximizes AI Factory Production,0,other,0,1,capacity_expansion,0,1,capacity_expansion,1,0,other,0
+484cfc9cfc07b2bb,zh,【PCB】金像電(2368)首月營收比預期高13%，全年營運有上修機會？,1,demand_up,1,1,financial_report,0,1,financial_report,1,1,financial_report,1
+431419a36bd4518a,zh,南亞科營收／2月156億元、月增1.94% 年增586%創新高,1,financial_report,1,1,financial_report,1,1,financial_report,1,1,financial_report,1
+0b8878928783428e,zh,輝達AI戰隊系列3一輝達VR200新機櫃電源價值大跳升，散熱、線束被誤殺回魂！超微推「胖胖櫃」苦追在後,1,demand_up,1,0,other,0,1,product_tech,1,1,product_tech,1
+3f18dba91391c236,en,Google is officially behind $10B data center on Northland property it bought years ago,1,capacity_expansion,1,0,other,0,1,capacity_expansion,1,1,capacity_expansion,1
+26f16a693e65a249,en,Amazon cloud data centers in Gulf face outages amid Iran strikes in the region,1,supply_disruption,-1,1,supply_disruption,0,1,supply_disruption,-1,1,supply_disruption,-1
+0993a5b9200fce20,zh,集邦：輝達B300系列明年出貨 帶動CoWoS-L成長,1,demand_up,1,1,demand_up,1,1,demand_up,1,1,demand_up,1
+0d52c8403108a94c,en,Foxconn to invest US$510mil in Kaohsiung headquarters in Taiwan,1,capacity_expansion,1,1,capacity_expansion,0,1,capacity_expansion,1,1,capacity_expansion,1
+617d3f22ca8606f4,en,AMD-Samsung HBM talks reportedly include foundry work,1,demand_up,1,0,other,0,1,demand_up,1,1,product_tech,1
+0b0a2bffa834db7f,en,"A new workforce partnership, Amazon’s data centers: Mississippi Marketplace",0,other,0,0,other,0,0,other,0,0,other,0
+6903d190947a721e,en,AWS acquires data center campus connected to Susquehanna nuclear station,1,capacity_expansion,1,0,other,0,1,capacity_expansion,1,1,capacity_expansion,1
+3a6d9a6fc72f3fd3,zh,"南亞公告轉讓16,874張南電股票",0,other,0,0,other,0,0,other,0,0,other,0
+0461b5004a770d64,en,‘Chinese delay’ make Apple and Foxconn seek government help,1,policy_trade,-1,1,other,-1,1,policy_trade,-1,1,supply_disruption,-1
+8f9205d69597bc15,zh,陽明海運驚傳員工墜樓身亡　公司「3點聲明」回應了,0,other,0,0,other,0,0,other,0,0,other,0
+e5bfd71837118fc2,zh,男子偽造帳單Email騙取逾9.5億元 Facebook、Google都受騙 成全球最大智商稅,0,other,0,0,other,0,0,other,0,0,other,0
+26e8b95c7a639546,zh,AI、HPC 需求強勁 法人看好日月光投控獲利仍有上檔空間,1,demand_up,1,1,financial_report,1,1,demand_up,1,1,demand_up,1
+0e4056008f0f56fb,zh,焦點股》台達電：一舉飛躍600元 創新天價,0,other,0,0,other,0,0,other,0,0,other,0
+3b310e2f8bb65526,en,Amazon's Ashton data center project near Manassas Mall deferred,1,demand_down,-1,0,other,0,1,capacity_tight,-1,1,supply_disruption,-1
+4a48444e1b777761,zh,"新日興、欣興爆鉅額違約交割合計金額5,827.4萬元- 證券",0,other,0,0,other,0,0,other,0,0,other,0
+b525478d8a17cb59,zh,"台光電砸 4,900 萬美元投資美國！新增兩條生產線拚 2026 年投產",1,capacity_expansion,1,0,other,0,1,capacity_expansion,1,1,capacity_expansion,1
+273f166e5c584efd,zh,萬海7月單月獲利達60.84億元、EPS2.17元　年增19.97%,1,financial_report,1,1,financial_report,0,1,financial_report,1,0,other,0
+bd81288361505e53,zh,緯創緯穎擴建德州新廠 12.3億布局北美再升級,1,capacity_expansion,1,1,capacity_expansion,0,1,capacity_expansion,1,1,capacity_expansion,1
+713d0d1dc9e0b9a9,zh,太空 AI 散熱議題成顯學 建準、奇鋐、雙鴻搶商機,1,demand_up,1,0,other,0,1,demand_up,1,1,demand_up,1
+1b9f1505a26b4009,en,"[News] Apple Reportedly Releases Supply Chain List, Nanya Technology, Lotes, and Novatek Not Included",1,demand_down,-1,0,other,0,1,supply_disruption,-1,1,demand_down,-1
+070b6c61370216bf,en,Advanced Power Solution Tackles AI Server Demands,1,product_tech,1,1,demand_up,0,1,product_tech,1,1,product_tech,1
+14f239c4084df53e,zh,ABF載板族群表現疲軟！南電重挫逾6%、欣興跌逾4%,0,other,0,0,other,0,1,demand_down,-1,0,other,0
+2c753de93f517939,zh,緯創高雄研發大樓動土 預計2028年12月完工,1,capacity_expansion,1,1,other,1,1,capacity_expansion,1,1,capacity_expansion,1
+13ba32eceb88e260,en,Microsoft proposes ratepayer-protection tariff in Nevada,1,policy_trade,0,1,policy_trade,0,1,policy_trade,-1,0,other,0
+015682ac92d13de6,en,How to Build In-Vehicle AI Agents with NVIDIA: From Cloud to Car | NVIDIA Technical Blog,0,other,0,0,other,0,0,other,0,0,other,0
+a4e5abaccc17b54f,en,“We Will Continue Building Our Leadership Position In India’s Enterprise And AI Server Ecosystem”,0,other,0,1,other,1,0,other,0,1,demand_up,1
+80e825b99f14dc47,en,Dell Jumps 10% on AI Server Boom While MongoDB Sinks 14% Despite Earnings Beat,0,other,0,1,financial_report,0,1,demand_up,1,1,demand_up,1
+8285e5cecc3d6e5e,zh,拓展退除役官兵就業資源 基隆榮服處拜會長榮海運盼創多贏,0,other,0,0,other,0,0,other,0,0,other,0
+5a526372c2cc494d,en,"OpenAI completes for-profit move, Microsoft given 27% stake and $250bn Azure contract but no longer has cloud right of first refusal",1,demand_up,1,1,financial_report,0,1,product_tech,1,1,demand_up,1
+0849a6349f5dd4ff,en,Microsoft hosts open house on proposed data center,1,capacity_expansion,1,0,other,0,1,capacity_expansion,1,0,other,0
+ea82108cb2c81422,en,"US lawmakers in letter to Google, Microsoft, Amazon and Meta: Your data centers are increasing electricit",1,policy_trade,-1,0,other,0,1,policy_trade,-1,1,policy_trade,-1
+55f3435f53d98219,zh,鴻海將合作Nissan！劉揚偉證實「朝代工模式發展」：併購非主要目的,1,demand_up,1,0,other,0,1,capacity_expansion,1,1,other,1
+21e7e9b66e1d5bab,zh,【國安基金來撐盤3】國家隊撐腰？八大官股券商4/9以來大買南亞科逾62萬張12檔護盤股最愛鴻海,0,other,0,0,other,0,0,other,0,0,other,0
+3c0dac0e1705bbcc,en,AI Server Demand Puts Supply Chains Under 2027 Pressure,1,capacity_tight,1,1,demand_up,0,1,demand_up,1,1,capacity_tight,1
+0000f785c1610a98,zh,震驚業界！日月光董座張虔生獨子張能傑驟逝 享年46歲,0,other,0,0,other,0,0,other,0,0,other,0
+6d1ae327d757fc48,zh,受惠AI需求 景碩ABF載板訂單旺,1,demand_up,1,1,demand_up,1,1,demand_up,1,1,demand_up,1
+0b3d61f0a185baaf,en,Wired for Action: Langflow Enables Local AI Agent Creation on NVIDIA RTX PCs,0,other,0,0,other,0,0,other,0,0,other,0
+0ade1a438591381b,zh,廣宇8月營收創32個月新高 Q4衝刺AI伺服器、機器人產品出貨,1,demand_up,1,1,financial_report,1,1,financial_report,1,1,financial_report,1
+7b557c283c04e431,zh,【即時新聞】最新！華航7月營收222.35億元創歷史新高，年增逾25%！,1,financial_report,1,1,financial_report,1,0,other,0,0,other,0
+5068eac303b806b0,en,A Microsoft AI Data Center Saps Water From A Small Mexican Town,0,other,0,0,other,0,0,other,0,0,other,0
+e4de0e71f8b25a29,zh,00922換股2進2出！砍黃仁勳背板股仁寶、欣興,0,other,0,0,other,0,0,other,0,0,other,0
+820b2a852c05fe36,en,Amazon to Invest $4.4 Billion in New Zealand Data Centers,1,capacity_expansion,1,1,capacity_expansion,0,1,capacity_expansion,1,1,capacity_expansion,1

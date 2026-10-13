@@ -1,35 +1,35 @@
-stock_id,name_zh,name_en,aliases,country
-6488,環球晶,GlobalWafers,GlobalWafers|環球晶圓,TW
-3037,欣興,Unimicron,Unimicron|欣興電子,TW
-8046,南電,Nan Ya PCB,Nan Ya PCB|Nan Ya Printed Circuit Board|南亞電路板,TW
-3189,景碩,Kinsus,Kinsus|景碩科技,TW
-2383,台光電,Elite Material,Elite Material|EMC|台光電子,TW
-2330,台積電,TSMC,TSMC|Taiwan Semiconductor|台灣積體電路,TW
-3711,日月光投控,ASE Technology,ASE Technology|ASE Group|日月光,TW
-2408,南亞科,Nanya Technology,Nanya Technology|Nanya Tech|南亞科技,TW
-2344,華邦電,Winbond,Winbond|Winbond Electronics|華邦電子,TW
-3443,創意,Global Unichip,Global Unichip|GUC|創意電子,TW
-2368,金像電,Gold Circuit Electronics,Gold Circuit|GCE|金像電子,TW
-2317,鴻海,Hon Hai,Hon Hai|Foxconn|Hon Hai Precision|鴻海精密,TW
-2382,廣達,Quanta Computer,Quanta Computer|Quanta Cloud Technology|QCT|廣達電腦,TW
-3231,緯創,Wistron,Wistron|緯創資通,TW
-6669,緯穎,Wiwynn,Wiwynn|緯穎科技,TW
-2356,英業達,Inventec,Inventec|英業達,TW
-2376,技嘉,Gigabyte,Gigabyte|Giga-Byte|技嘉科技,TW
-2308,台達電,Delta Electronics,Delta Electronics|台達電子,TW
-2301,光寶科,Lite-On Technology,Lite-On|Lite-On Technology|光寶科技,TW
-3017,奇鋐,Asia Vital Components,Asia Vital Components|AVC|奇鋐科技,TW
-3324,雙鴻,Auras Technology,Auras|Auras Technology|雙鴻科技,TW
-2059,川湖,King Slide Works,King Slide|川湖科技,TW
-2603,長榮,Evergreen Marine,Evergreen Marine|Evergreen Line|長榮海運,TW
-2609,陽明,Yang Ming Marine,Yang Ming|Yang Ming Marine|陽明海運,TW
-2615,萬海,Wan Hai Lines,Wan Hai|Wan Hai Lines|萬海航運,TW
-2618,長榮航,EVA Air,EVA Air|EVA Airways|長榮航空,TW
-2610,華航,China Airlines,China Airlines|中華航空,TW
-2636,台驊投控,T3EX Global,T3EX|台驊,TW
-NVDA,輝達,NVIDIA,NVIDIA|Nvidia|輝達,US
-MSFT,微軟,Microsoft,Microsoft|Azure|微軟,US
-GOOGL,Alphabet,Alphabet,Alphabet|Google|Google Cloud|谷歌,US
-AMZN,亞馬遜,Amazon,Amazon|AWS|Amazon Web Services|亞馬遜,US
-META,Meta,Meta Platforms,Meta Platforms|Meta,US
-ORCL,甲骨文,Oracle,Oracle|OCI|甲骨文,US
+stock_id,name_zh,name_en,aliases,country,title_keywords,title_exclude
+6488,環球晶,GlobalWafers,GlobalWafers|環球晶圓,TW,環球晶|GlobalWafers,
+3037,欣興,Unimicron,Unimicron|欣興電子,TW,欣興|Unimicron,
+8046,南電,Nan Ya PCB,Nan Ya PCB|Nan Ya Printed Circuit Board|南亞電路板,TW,南電|Nan Ya PCB|Nan Ya Printed Circuit,
+3189,景碩,Kinsus,Kinsus|景碩科技,TW,景碩|Kinsus,
+2383,台光電,Elite Material,Elite Material|EMC|台光電子,TW,台光電|Elite Material,
+2330,台積電,TSMC,TSMC|Taiwan Semiconductor|台灣積體電路,TW,台積|TSMC|Taiwan Semiconductor,
+3711,日月光投控,ASE Technology,ASE Technology|ASE Group|日月光,TW,日月光|ASE Technology|ASE Group,
+2408,南亞科,Nanya Technology,Nanya Technology|Nanya Tech|南亞科技,TW,南亞科|Nanya Technology|Nanya Tech,
+2344,華邦電,Winbond,Winbond|Winbond Electronics|華邦電子,TW,華邦|Winbond,
+3443,創意,Global Unichip,Global Unichip|GUC|創意電子,TW,創意電子|Global Unichip|GUC,
+2368,金像電,Gold Circuit Electronics,Gold Circuit|GCE|金像電子,TW,金像電|Gold Circuit,
+2317,鴻海,Hon Hai,Hon Hai|Foxconn|Hon Hai Precision|鴻海精密,TW,鴻海|富士康|Foxconn|Hon Hai,
+2382,廣達,Quanta Computer,Quanta Computer|Quanta Cloud Technology|QCT|廣達電腦,TW,廣達|Quanta Computer,
+3231,緯創,Wistron,Wistron|緯創資通,TW,緯創|Wistron,
+6669,緯穎,Wiwynn,Wiwynn|緯穎科技,TW,緯穎|Wiwynn,
+2356,英業達,Inventec,Inventec|英業達,TW,英業達|Inventec,
+2376,技嘉,Gigabyte,Gigabyte|Giga-Byte|技嘉科技,TW,技嘉|Gigabyte,
+2308,台達電,Delta Electronics,Delta Electronics|台達電子,TW,台達電|台達|Delta Electronics,平台達
+2301,光寶科,Lite-On Technology,Lite-On|Lite-On Technology|光寶科技,TW,光寶|Lite-On,
+3017,奇鋐,Asia Vital Components,Asia Vital Components|AVC|奇鋐科技,TW,奇鋐|Asia Vital Components,
+3324,雙鴻,Auras Technology,Auras|Auras Technology|雙鴻科技,TW,雙鴻|Auras,
+2059,川湖,King Slide Works,King Slide|川湖科技,TW,川湖|King Slide,
+2603,長榮,Evergreen Marine,Evergreen Marine|Evergreen Line|長榮海運,TW,長榮海|Evergreen Marine|Evergreen Line,
+2609,陽明,Yang Ming Marine,Yang Ming|Yang Ming Marine|陽明海運,TW,陽明|Yang Ming,陽明山|陽明交大|陽明交通|王陽明
+2615,萬海,Wan Hai Lines,Wan Hai|Wan Hai Lines|萬海航運,TW,萬海|Wan Hai,
+2618,長榮航,EVA Air,EVA Air|EVA Airways|長榮航空,TW,長榮航|EVA Air,
+2610,華航,China Airlines,China Airlines|中華航空,TW,華航|中華航空|China Airlines,
+2636,台驊投控,T3EX Global,T3EX|台驊,TW,台驊|T3EX,
+NVDA,輝達,NVIDIA,NVIDIA|Nvidia|輝達,US,輝達|黃仁勳|Nvidia|Jensen Huang,
+MSFT,微軟,Microsoft,Microsoft|Azure|微軟,US,微軟|Microsoft|Azure,
+GOOGL,Alphabet,Alphabet,Alphabet|Google|Google Cloud|谷歌,US,谷歌|Google|Alphabet,
+AMZN,亞馬遜,Amazon,Amazon|AWS|Amazon Web Services|亞馬遜,US,亞馬遜|Amazon|AWS,
+META,Meta,Meta Platforms,Meta Platforms|Meta,US,臉書|Meta|Facebook,
+ORCL,甲骨文,Oracle,Oracle|OCI|甲骨文,US,甲骨文|Oracle,
