@@ -96,6 +96,8 @@ def load_window(query_id: str, query: str, lang: str, window_start: pd.Timestamp
 
 def parse_items(xml_text: str) -> list:
     items = []
+    # 部分新聞標題含 XML 不允許的控制字元，先移除再解析
+    xml_text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", xml_text)
     for item in ET.fromstring(xml_text).iter("item"):
         source_el = item.find("source")
         source = source_el.text.strip() if source_el is not None and source_el.text else ""
@@ -121,11 +123,18 @@ def normalize_title(title: str) -> str:
 def build_processed(queries: pd.DataFrame) -> None:
     meta = queries.set_index("query_id")
     rows = []
+    bad_files = []
     for path in sorted(RAW_DIR.glob("*/*.xml")):
         query_id = path.parent.name
         if query_id not in meta.index:
             continue
-        for it in parse_items(path.read_text(encoding="utf-8")):
+        try:
+            items = parse_items(path.read_text(encoding="utf-8"))
+        except ET.ParseError as e:
+            bad_files.append(path)
+            print(f"[警告] 無法解析 {path}：{e}")
+            continue
+        for it in items:
             it.update({
                 "query_id": query_id,
                 "topic_chain": meta.at[query_id, "chain"],
@@ -151,6 +160,8 @@ def build_processed(queries: pd.DataFrame) -> None:
 
     PROCESSED_PATH.parent.mkdir(parents=True, exist_ok=True)
     df.to_parquet(PROCESSED_PATH, index=False)
+    if bad_files:
+        print(f"\n有 {len(bad_files)} 個檔案無法解析，已略過（刪掉它們再跑一次就會重抓）")
     print(f"\n原始 {raw_count} 筆 → 去重後 {len(df)} 筆，已存：{PROCESSED_PATH}")
 
     windows = df.groupby("query_id")["window_start"].nunique()
@@ -166,7 +177,11 @@ def main() -> None:
     parser.add_argument("--start", default="2024-01-01")
     parser.add_argument("--end", default=pd.Timestamp.today().strftime("%Y-%m-%d"))
     parser.add_argument("--only", nargs="*", help="只跑指定的 query_id")
+    parser.add_argument("--build-only", action="store_true", help="不抓新資料，只用快取重建 Parquet")
     args = parser.parse_args()
+    if args.build_only:
+        build_processed(pd.read_csv(QUERIES_PATH, dtype=str))
+        return
 
     queries = pd.read_csv(QUERIES_PATH, dtype=str)
     todo = queries if not args.only else queries[queries["query_id"].isin(args.only)]

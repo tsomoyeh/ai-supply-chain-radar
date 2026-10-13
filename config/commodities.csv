@@ -1,0 +1,7 @@
+series_id,name_zh,name_en,unit,chain,layer,related_segments
+PCOPPUSDM,銅,Copper,USD per metric ton,ai_server,1_upstream,ccl|abf_substrate|pcb|thermal
+PALUMUSDM,鋁,Aluminum,USD per metric ton,ai_server,1_upstream,thermal|server_odm
+PTINUSDM,錫,Tin,USD per metric ton,ai_server,1_upstream,pcb|server_odm
+PNICKUSDM,鎳,Nickel,USD per metric ton,ai_server,1_upstream,abf_substrate|pcb
+POILBREUSDM,布蘭特原油,Brent crude oil,USD per barrel,ai_server,4_logistics,ocean_freight|air_cargo
+PCU33443344,半導體與電子零組件生產者物價指數,PPI semiconductor and electronic components,Index,ai_server,2_manufacturing,foundry|memory|packaging
