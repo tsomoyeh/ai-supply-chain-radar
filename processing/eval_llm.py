@@ -55,18 +55,18 @@ def make_sheet() -> None:
 
 
 # ---------- 2. 讓模型判斷 ----------
-def run_model(model: str) -> None:
+def run_model(model: str, provider: str) -> None:
     from dotenv import load_dotenv
-    from groq import Groq
 
     load_dotenv(".env")
-    client = Groq(api_key=os.environ["GROQ_API_KEY"])
+    client = L.make_client(provider)
     labels = pd.read_csv(LABELS_PATH, dtype=str, encoding="utf-8-sig")
-    run_dir = EVAL_RAW_DIR / L.model_slug(model)
+    name = model if provider == "groq" else f"{provider}/{model}"
+    run_dir = EVAL_RAW_DIR / L.model_slug(name)
     run_dir.mkdir(parents=True, exist_ok=True)
     results_path, errors_path = run_dir / "results.jsonl", run_dir / "errors.jsonl"
     todo = labels[~labels["article_id"].isin(L.load_done(results_path))]
-    print(f"{model}：還有 {len(todo)} 則要判斷")
+    print(f"{provider} {model}：還有 {len(todo)} 則要判斷")
     for start in range(0, len(todo), L.BATCH_SIZE):
         batch = todo.iloc[start:start + L.BATCH_SIZE]
         ok, tokens = L.process_batch(client, model, batch, results_path, errors_path)
@@ -169,12 +169,13 @@ def main() -> None:
     sub.add_parser("sheet")
     run = sub.add_parser("run")
     run.add_argument("--model", required=True)
+    run.add_argument("--provider", default="groq", choices=list(L.PROVIDERS))
     sub.add_parser("score")
     args = parser.parse_args()
     if args.cmd == "sheet":
         make_sheet()
     elif args.cmd == "run":
-        run_model(args.model)
+        run_model(args.model, args.provider)
     else:
         score()
 

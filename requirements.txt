@@ -4,3 +4,5 @@ pyarrow
 groq
 python-dotenv
 pydantic
+tqdm
+openai
