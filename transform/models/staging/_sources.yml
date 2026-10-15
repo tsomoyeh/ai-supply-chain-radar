@@ -1,0 +1,39 @@
+version: 2
+
+# 原始資料：Python 擷取程式產出的 Parquet，以及 config/ 裡的設定檔
+# dbt 從 transform/ 資料夾執行，所以路徑以 ../ 開頭
+sources:
+  - name: raw
+    tables:
+      - name: mops_revenue
+        description: MOPS 上市櫃月營收（新台幣千元），每月一個分區
+        meta:
+          external_location: "read_parquet('../data/processed/mops_monthly_revenue/*/*.parquet', hive_partitioning = false)"
+      - name: news_articles
+        description: 過濾後的新聞（標題、來源、主題查詢對應的鏈和層級）
+        meta:
+          external_location: "read_parquet('../data/processed/news/articles_filtered.parquet')"
+      - name: article_companies
+        description: 新聞與公司的對應（一則新聞可以對應多家公司）
+        meta:
+          external_location: "read_parquet('../data/processed/news/article_companies.parquet')"
+      - name: llm_signals
+        description: LLM 對每則新聞的判斷（相關性、事件類型、方向、強度）
+        meta:
+          external_location: "read_parquet('../data/processed/news/llm_signals_openai_gpt-oss-120b.parquet')"
+      - name: commodity_prices
+        description: FRED 原物料價格月資料
+        meta:
+          external_location: "read_parquet('../data/processed/commodities/prices.parquet')"
+      - name: companies
+        description: 追蹤的公司清單（config/companies.csv）
+        meta:
+          external_location: "read_csv('../config/companies.csv', header = true, all_varchar = true)"
+      - name: chain_membership
+        description: 公司在哪條供應鏈的哪一層（config/chain_membership.csv）
+        meta:
+          external_location: "read_csv('../config/chain_membership.csv', header = true, all_varchar = true)"
+      - name: commodities
+        description: 原物料清單與對應的鏈、層級（config/commodities.csv）
+        meta:
+          external_location: "read_csv('../config/commodities.csv', header = true, all_varchar = true)"

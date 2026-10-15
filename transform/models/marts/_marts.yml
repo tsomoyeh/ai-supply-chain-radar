@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: mart_layer_month
+    description: 每條鏈、每層、每月的新聞訊號指數、營收年增率與原物料價格年增率
+    columns:
+      - name: chain
+        tests: [not_null]
+      - name: layer
+        tests: [not_null]
+      - name: month
+        tests: [not_null]
+      - name: signal_index
+        description: 新聞訊號相對於該層過去平均的標準差數（只用過去資料計算，至少 6 個月）

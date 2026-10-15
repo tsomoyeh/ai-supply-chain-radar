@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: stg_revenue
+    description: 上市櫃公司月營收
+    columns:
+      - name: stock_id
+        tests: [not_null]
+      - name: month
+        tests: [not_null]
+  - name: stg_companies
+    description: 追蹤的公司清單
+    columns:
+      - name: stock_id
+        tests: [not_null, unique]
+  - name: stg_news_signals
+    description: 每則新聞的 LLM 判斷
+    columns:
+      - name: article_id
+        tests: [not_null, unique]
+      - name: month
+        tests: [not_null]
+      - name: event_type
+        tests:
+          - accepted_values:
+              arguments:
+                values: [demand_up, demand_down, capacity_expansion, capacity_tight, price_up, price_down,
+                         supply_disruption, policy_trade, financial_report, product_tech, other]
+      - name: direction
+        tests:
+          - accepted_values:
+              arguments:
+                values: [-1, 0, 1]
+                quote: false
+  - name: stg_article_companies
+    description: 新聞與公司的對應
+    columns:
+      - name: stock_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('stg_companies')
+                field: stock_id
+  - name: stg_chain_membership
+    description: 公司在供應鏈中的位置
+    columns:
+      - name: stock_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('stg_companies')
+                field: stock_id
+  - name: stg_commodity_prices
+    description: 原物料價格月資料
+    columns:
+      - name: name_zh
+        tests: [not_null]  # 確認每個序列都在 config/commodities.csv 裡有對應

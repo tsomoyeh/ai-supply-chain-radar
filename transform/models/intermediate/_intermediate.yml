@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: int_article_layers
+    description: 每則有效新聞對應到的鏈、層級與訊號分數（已排除不相關與財報類）
+  - name: int_layer_month_signals
+    description: 每條鏈、每層、每月的新聞訊號彙總
+  - name: int_company_month_signals
+    description: 每家公司每月的新聞訊號彙總
