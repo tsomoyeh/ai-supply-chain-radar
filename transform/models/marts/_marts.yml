@@ -12,3 +12,13 @@ models:
         tests: [not_null]
       - name: signal_index
         description: 新聞訊號相對於該層過去平均的標準差數（只用過去資料計算，至少 6 個月）
+  - name: mart_news_events
+    description: 每則相關新聞的事件、方向、涉及公司與層級（儀表板事件列表）
+    columns:
+      - name: article_id
+        tests: [not_null, unique]
+  - name: mart_company_month
+    description: 每家公司每月的新聞訊號與營收年增率（儀表板層級深入頁）
+    columns:
+      - name: stock_id
+        tests: [not_null]

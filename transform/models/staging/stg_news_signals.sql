@@ -4,6 +4,7 @@ select
     s.title,
     s.source,
     s.lang,
+    s.link,
     s.published_at,
     cast(date_trunc('month', s.published_at) as date) as month,
     s.relevant = 1 as is_relevant,
