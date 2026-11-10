@@ -1,5 +1,7 @@
 # AI Supply Chain Radar
 
+**Live dashboard:** [ai-supply-chain-radar.streamlit.app](https://ai-supply-chain-radar.streamlit.app) (English / 中文)
+
 A data pipeline that tracks the semiconductor and AI server supply chain — from raw materials to cloud customers — by turning news headlines into structured signals and testing them against hard data: Taiwan monthly revenue, commodity prices, and more.
 
 **Research question:** Do supply-chain signals extracted from news lead monthly revenue, which is only published about 10 days after each month ends?
@@ -125,7 +127,6 @@ analysis/      lead–lag analysis
 ```
 
 ## Roadmap
-- Dashboard (Streamlit): weekly events, layer tone, and revenue, framed as monitoring
 - Scheduled weekly runs on AWS (S3 + Lambda/EventBridge) or GitHub Actions
 - US SEC filings for cloud capex, to give the end-customer layer hard data
 - Re-test the lead–lag hypothesis on data collected after this analysis
