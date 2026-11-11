@@ -2,8 +2,8 @@ name: Update data
 
 on:
   workflow_dispatch:          # 手動觸發（先用這個測試）
-  # schedule:                 # 確認手動執行成功後，再打開每日排程
-  #   - cron: "0 23 * * *"    # 每天 UTC 23:00 = 台灣時間早上 7:00
+  schedule:
+    - cron: "0 23 * * *"      # 每天 UTC 23:00 = 台灣時間早上 7:00
 
 permissions:
   id-token: write   # OIDC：向 AWS 換取臨時權限，不需要存放任何 AWS 金鑰
