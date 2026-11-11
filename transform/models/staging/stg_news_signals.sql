@@ -15,4 +15,6 @@ select
     a.topic_chain,
     a.topic_layer
 from {{ source('raw', 'llm_signals') }} as s
-left join {{ source('raw', 'news_articles') }} as a using (article_id)
+-- 只保留目前新聞清單裡還存在的判斷結果：Google News 重抓時同一篇新聞的連結可能改變，
+-- 舊連結的判斷結果會變成孤兒資料；那些新聞已用新連結重新判斷，排除可避免重複計算
+join {{ source('raw', 'news_articles') }} as a using (article_id)

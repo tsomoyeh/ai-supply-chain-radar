@@ -100,9 +100,17 @@ def is_recent(period: str) -> bool:
     return period > cutoff
 
 
+def cache_is_complete(path: Path, period: str) -> bool:
+    """快取要在「次月 15 日之後」抓的才算完整（公布截止日是 10 號，再留幾天緩衝）。"""
+    if not path.exists():
+        return False
+    deadline = pd.Timestamp(period + "-01") + pd.DateOffset(months=1, days=14)
+    return pd.Timestamp(path.stat().st_mtime, unit="s") >= deadline
+
+
 def load_month(market: str, period: str) -> pd.DataFrame:
     path = raw_path(market, period)
-    if path.exists() and not is_recent(period):
+    if cache_is_complete(path, period):
         content = path.read_bytes()
     else:
         content = fetch_bytes(market, period)

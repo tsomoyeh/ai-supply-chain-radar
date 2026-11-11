@@ -31,6 +31,7 @@ RAW_DIR = Path("data/raw/google_news")
 PROCESSED_PATH = Path("data/processed/news/articles.parquet")
 WINDOW_DAYS = 14
 SLEEP_SECONDS = 2.5
+MAX_FAILURES = 10  # 單一查詢失敗會跳過（下次再重抓），累積太多次才判斷為被封鎖
 RECENT_DAYS = 21
 LANG_PARAMS = {
     "en": "hl=en-US&gl=US&ceid=US:en",
@@ -72,7 +73,7 @@ def fetch(query: str, lang: str, window_start: pd.Timestamp) -> str:
             print(f"  連線失敗（curl 代碼 {result.returncode}），{wait} 秒後重試")
             time.sleep(wait)
             continue
-        if status in ("429", "503"):
+        if status in ("404", "429", "500", "502", "503"):  # Google 偶爾回傳暫時性錯誤
             wait = 60 * 2 ** attempt
             print(f"  被限速（{status}），{wait} 秒後重試")
             time.sleep(wait)
@@ -85,9 +86,12 @@ def fetch(query: str, lang: str, window_start: pd.Timestamp) -> str:
 
 def load_window(query_id: str, query: str, lang: str, window_start: pd.Timestamp) -> int:
     path = RAW_DIR / query_id / f"{window_start:%Y-%m-%d}.xml"
-    is_recent = window_start > pd.Timestamp.today() - timedelta(days=RECENT_DAYS)
-    if path.exists() and not is_recent:
-        return -1  # 用快取
+    # 快取要在「時間窗結束 7 天後」抓的才算完整；太早抓的新聞可能還沒收錄齊全，要重抓
+    window_end = window_start + timedelta(days=WINDOW_DAYS)
+    if path.exists():
+        fetched_at = pd.Timestamp(path.stat().st_mtime, unit="s")
+        if fetched_at >= window_end + timedelta(days=7):
+            return -1  # 用快取
     body = fetch(query, lang, window_start)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(body, encoding="utf-8")
@@ -188,11 +192,19 @@ def main() -> None:
     windows = window_starts(args.start, args.end)
     print(f"準備處理 {len(windows)} 個時間窗 × {len(todo)} 個查詢 = {len(windows) * len(todo)} 次")
 
+    failed = []
     try:
         for window_start in windows:
             fetched = cached = 0
             for row in todo.itertuples():
-                n = load_window(row.query_id, build_query(row.terms, row.must_include), row.lang, window_start)
+                try:
+                    n = load_window(row.query_id, build_query(row.terms, row.must_include), row.lang, window_start)
+                except BlockedError as e:
+                    # 失敗的查詢不存快取，下次執行會自動重抓
+                    failed.append(f"{row.query_id} @ {window_start:%Y-%m-%d}：{str(e)[:60]}")
+                    if len(failed) >= MAX_FAILURES:
+                        raise BlockedError(f"累計 {len(failed)} 次失敗，可能被封鎖")
+                    continue
                 if n < 0:
                     cached += 1
                 else:
@@ -207,6 +219,9 @@ def main() -> None:
         sys.exit(1)
 
     build_processed(queries)
+    if failed:
+        print(f"\n[注意] {len(failed)} 個查詢這次失敗，下次執行會自動重抓：")
+        print("\n".join(f"  {f}" for f in failed))
 
 
 if __name__ == "__main__":
