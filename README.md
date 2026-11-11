@@ -88,6 +88,20 @@ The chain is modeled in five layers — upstream materials, chip manufacturing, 
 - **Positivity bias:** positive headlines outnumber negative ones about 17 to 1 for demand events, so the index measures deviation from a layer's own history rather than raw tone.
 - **Data tests:** uniqueness, accepted values, and referential integrity between news, companies and chain membership run on every build.
 
+### Automation
+The full pipeline runs daily at 07:00 Taiwan time on GitHub Actions (`.github/workflows/update-data.yml`):
+1. Obtains short-lived AWS credentials through **OIDC** — no AWS keys are stored anywhere. The IAM role trusts only this repository's `main` branch, matched on GitHub's immutable owner and repository IDs, and can only read and write one S3 bucket (no delete).
+2. Restores raw caches and processed data from S3, runs `run_pipeline.py`, and writes the caches back — even if a later step fails, so completed fetches and LLM calls are never lost.
+3. Commits the refreshed dashboard snapshot; Streamlit Community Cloud redeploys automatically.
+
+Running costs: GitHub Actions is free for public repositories, S3 storage is a few cents a month, and daily LLM calls for new headlines cost a few cents a month.
+
+Lessons from making it unattended:
+- **Late-arriving data:** cache completeness is judged by *when a file was fetched*, not by how old the period is. Judging by period age silently kept a news window fetched mid-period and a revenue month fetched before all companies had reported.
+- **Transient failures:** a single failed news query is logged and retried on the next run instead of stopping the pipeline.
+- **Unstable IDs:** Google News can change a story's link between fetches, which orphaned earlier LLM results. The dbt staging model keeps only results whose article still exists, and a not-null test caught the issue the first time it happened.
+- **Completeness monitoring:** a dbt warning flags any tracked company missing revenue after the reporting deadline. MOPS's monthly summary does not add companies that report late.
+
 ## Limitations
 - Signals use **headlines only**, not full articles (copyright and cost). A field in the labeling sheet records whether reading the full article would change the label.
 - Google News returns at most ~100 results per query; TSMC and NVIDIA are therefore sampled rather than fully covered.
@@ -114,7 +128,7 @@ cd transform && dbt build --profiles-dir . && cd ..
 python analysis/lead_lag.py
 ```
 
-All ingestion steps cache raw responses and can be interrupted and resumed. Recent periods are re-fetched on every run because revenue and news arrive late.
+Or run every step in order with `python run_pipeline.py`. All ingestion steps cache raw responses and can be interrupted and resumed. Recent periods are re-fetched on every run because revenue and news arrive late.
 
 ## Repository layout
 ```
@@ -127,6 +141,5 @@ analysis/      lead–lag analysis
 ```
 
 ## Roadmap
-- Scheduled weekly runs on AWS (S3 + Lambda/EventBridge) or GitHub Actions
 - US SEC filings for cloud capex, to give the end-customer layer hard data
 - Re-test the lead–lag hypothesis on data collected after this analysis
