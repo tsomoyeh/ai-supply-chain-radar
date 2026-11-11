@@ -1,0 +1,63 @@
+name: Update data
+
+on:
+  workflow_dispatch:          # 手動觸發（先用這個測試）
+  # schedule:                 # 確認手動執行成功後，再打開每日排程
+  #   - cron: "0 23 * * *"    # 每天 UTC 23:00 = 台灣時間早上 7:00
+
+permissions:
+  id-token: write   # OIDC：向 AWS 換取臨時權限，不需要存放任何 AWS 金鑰
+  contents: write   # 把更新後的儀表板資料 commit 回 repo
+
+concurrency:
+  group: update-data          # 同一時間只跑一個，避免兩次執行互相覆蓋資料
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      BUCKET: ai-supply-chain-radar-mytso
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      LLM_PROVIDER: openrouter-groq
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Get temporary AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: us-east-1
+
+      - name: Download data from S3
+        run: aws s3 sync "s3://$BUCKET/data" data --only-show-errors
+
+      - name: Run pipeline
+        run: python run_pipeline.py
+
+      - name: Upload data to S3
+        if: always()   # 即使管線失敗，也把已經抓到的快取存回去
+        run: aws s3 sync data "s3://$BUCKET/data" --exclude "warehouse.duckdb" --only-show-errors
+
+      - name: Commit dashboard snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dashboard/snapshot
+          if git diff --cached --quiet; then
+            echo "儀表板資料沒有變化，不需要 commit"
+          else
+            git commit -m "Daily data refresh $(date -u +%Y-%m-%d)"
+            git push
+          fi
